@@ -1,0 +1,155 @@
+ATAJOS DE TECLADO DE NIRI
+=========================
+Mod = tecla Super (Windows). Si niri corre dentro de otra ventana, Mod = Alt.
+Fuentes: ~/.config/niri/config.kdl y ~/.config/niri/clavis/binds.kdl
+
+
+#############################################################
+##                                                         ##
+##              ★★★  ATAJOS DE CLAVIS  ★★★                 ##
+##                                                         ##
+#############################################################
+##                                                         ##
+##  Mod + Espacio            Spotlight (buscador/lanzador) ##
+##  Mod + Shift + Espacio    Spotlight: busqueda web       ##
+##  Mod + Alt + V            Spotlight: portapapeles       ##
+##  Mod + Alt + W            Spotlight: fondos de pantalla ##
+##                                                         ##
+##  Mod + /                  Mapa de atajos de Clavis      ##
+##  Mod + Retroceso          Menu de energia               ##
+##                                                         ##
+##  Mod + N                  Lateral: dashboard            ##
+##  Mod + A                  Lateral: ajustes rapidos      ##
+##  Mod + Ctrl + ,           Centro de control (General)   ##
+##                                                         ##
+##  Mod + Shift + W          Keystone: hub                 ##
+##  Mod + Shift + T          Keystone: herramientas        ##
+##                                                         ##
+##  Alt + Shift + L          Bloquear pantalla             ##
+##                                                         ##
+#############################################################
+
+
+-------------------------------------------------------------
+1. PROGRAMAS Y SISTEMA
+-------------------------------------------------------------
+Mod + T                   Abrir terminal (alacritty)
+Mod + D                   Lanzador de aplicaciones (fuzzel)
+Super + Alt + L           Bloquear pantalla (swaylock)
+Super + Alt + S           Activar/desactivar lector de pantalla (orca)
+Mod + Shift + /           Mostrar ventana de atajos importantes de niri
+Mod + Escape              Activar/desactivar el bloqueo de atajos por apps
+Mod + Shift + E           Salir de niri (pide confirmacion)
+Ctrl + Alt + Supr         Salir de niri (pide confirmacion)
+Mod + Shift + P           Apagar monitores (se encienden al mover el raton o pulsar una tecla)
+
+
+-------------------------------------------------------------
+2. VENTANAS
+-------------------------------------------------------------
+Mod + Q                   Cerrar ventana
+Mod + O                   Vista general (overview) de espacios y ventanas
+Mod + F                   Maximizar columna (con huecos y bordes)
+Mod + M                   Maximizar ventana hasta los bordes
+Mod + Shift + F           Pantalla completa
+Mod + Ctrl + F            Expandir columna al espacio libre disponible
+Mod + C                   Centrar columna
+Mod + Ctrl + C            Centrar todas las columnas visibles
+Mod + V                   Alternar ventana flotante / en mosaico
+Mod + Shift + V           Cambiar foco entre flotantes y mosaico
+Mod + W                   Alternar modo pestanas en la columna
+
+
+-------------------------------------------------------------
+3. MOVER EL FOCO
+-------------------------------------------------------------
+Mod + Izquierda  / Mod + H    Foco a la columna de la izquierda
+Mod + Derecha    / Mod + L    Foco a la columna de la derecha
+Mod + Arriba     / Mod + K    Foco a la ventana de arriba
+Mod + Abajo      / Mod + J    Foco a la ventana de abajo
+Mod + Inicio                  Foco a la primera columna
+Mod + Fin                     Foco a la ultima columna
+
+
+-------------------------------------------------------------
+4. MOVER VENTANAS / COLUMNAS
+-------------------------------------------------------------
+Mod + Ctrl + Izquierda / Mod + Ctrl + H   Mover columna a la izquierda
+Mod + Ctrl + Derecha   / Mod + Ctrl + L   Mover columna a la derecha
+Mod + Ctrl + Arriba    / Mod + Ctrl + K   Mover ventana hacia arriba
+Mod + Ctrl + Abajo     / Mod + Ctrl + J   Mover ventana hacia abajo
+Mod + Ctrl + Inicio                       Mover columna al principio
+Mod + Ctrl + Fin                          Mover columna al final
+
+Mod + [                   Meter/sacar ventana de la columna (izquierda)
+Mod + ]                   Meter/sacar ventana de la columna (derecha)
+Mod + ,                   Meter en la columna la ventana de la derecha
+Mod + .                   Sacar la ventana de abajo de la columna
+
+
+-------------------------------------------------------------
+5. TAMANO
+-------------------------------------------------------------
+Mod + R                   Siguiente ancho predefinido (1/3, 1/2, 2/3)
+Mod + Shift + R           Ancho predefinido anterior
+Mod + Ctrl + Shift + R    Siguiente alto predefinido
+Mod + Ctrl + R            Restablecer alto de la ventana
+Mod + -                   Reducir ancho de columna 10%
+Mod + =                   Aumentar ancho de columna 10%
+Mod + Shift + -           Reducir alto de ventana 10%
+Mod + Shift + =           Aumentar alto de ventana 10%
+
+
+-------------------------------------------------------------
+6. MONITORES
+-------------------------------------------------------------
+Mod + Shift + Flechas  /  Mod + Shift + H/J/K/L
+                          Foco al monitor izquierdo/abajo/arriba/derecho
+Mod + Shift + Ctrl + Flechas  /  Mod + Shift + Ctrl + H/J/K/L
+                          Mover columna al monitor izquierdo/abajo/arriba/derecho
+
+
+-------------------------------------------------------------
+7. ESPACIOS DE TRABAJO (workspaces)
+-------------------------------------------------------------
+Mod + 1 ... 9             Ir al espacio de trabajo 1-9
+Mod + Ctrl + 1 ... 9      Mover columna al espacio de trabajo 1-9
+Mod + AvPag  / Mod + U    Ir al espacio de abajo
+Mod + RePag  / Mod + I    Ir al espacio de arriba
+Mod + Ctrl + AvPag / Mod + Ctrl + U    Mover columna al espacio de abajo
+Mod + Ctrl + RePag / Mod + Ctrl + I    Mover columna al espacio de arriba
+Mod + Shift + AvPag / Mod + Shift + U  Mover el espacio entero hacia abajo
+Mod + Shift + RePag / Mod + Shift + I  Mover el espacio entero hacia arriba
+
+
+-------------------------------------------------------------
+8. RUEDA DEL RATON
+-------------------------------------------------------------
+Mod + Rueda abajo/arriba            Cambiar de espacio de trabajo
+Mod + Ctrl + Rueda abajo/arriba     Mover columna a otro espacio
+Mod + Rueda izq/der                 Foco a columna izquierda/derecha
+Mod + Ctrl + Rueda izq/der          Mover columna izquierda/derecha
+Mod + Shift + Rueda abajo/arriba    Foco a columna derecha/izquierda
+Mod + Ctrl + Shift + Rueda abajo/arriba   Mover columna derecha/izquierda
+
+
+-------------------------------------------------------------
+9. CAPTURAS DE PANTALLA
+-------------------------------------------------------------
+Impr Pant                 Captura (seleccionar area)
+Ctrl + Impr Pant          Captura de toda la pantalla
+Alt + Impr Pant           Captura de la ventana activa
+(Se guardan en ~/Pictures/Screenshots/)
+
+
+-------------------------------------------------------------
+10. TECLAS MULTIMEDIA (funcionan con la pantalla bloqueada)
+-------------------------------------------------------------
+Subir volumen             +10% (maximo 100%)
+Bajar volumen             -10%
+Silenciar                 Silenciar/activar altavoces
+Silenciar micro           Silenciar/activar microfono
+Play / Pausa              Reproducir/pausar
+Stop                      Detener
+Anterior / Siguiente      Pista anterior / siguiente
+Brillo + / Brillo -       Subir / bajar brillo 10%

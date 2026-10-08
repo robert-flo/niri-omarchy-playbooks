@@ -1,0 +1,49 @@
+
+   Atajo                   | Función                         | Descripción
+  -------------------------|---------------------------------|-----------------------------------------------------------------
+   Super + Espacio         | Spotlight Launcher              | Abre el buscador y lanzador principal de aplicaciones y
+                           |                                 | archivos.
+   Super + Shift + Espacio | Búsqueda Web                    | Abre Spotlight directo en modo de búsqueda en internet.
+   Super + Alt + V         | Historial del Portapapeles      | Abre el gestor de portapapeles de Clavis / key-cli con vista
+                           |                                 | previa.
+   Super + Alt + W         | Selector de Fondos de Pantalla  | Galería interactiva de wallpapers con cambio dinámico de tema
+                           |                                 | Matugen.
+   Super + /               | Mapa de Atajos                  | Muestra en pantalla el mapa visual interactivo de todos los
+                           |                                 | atajos.
+   Super + A               | Ajustes Rápidos (Quicksettings) | Panel lateral derecho: volumen, brillo, Wi-Fi, Bluetooth y
+                           |                                 | perfiles.
+   Super + N               | Dashboard / Notificaciones      | Panel lateral izquierdo: centro de notificaciones, clima y
+                           |                                 | widgets.
+   Super + Shift + W       | Keystone Hub                    | Panel central interactivo (Dynamic Island / Isla dinámica de
+                           |                                 | control).
+   Super + Shift + T       | Keystone Tools                  | Herramientas y utilidades rápidas (calculadora, conversión,
+                           |                                 | notas).
+   Super + Ctrl + ,        | Centro de Control               | Panel de configuración general del entorno y personalización.
+   Super + Backspace       | Menú de Energía (Power Menu)    | Opciones para apagar, reiniciar, suspender o cerrar sesión.
+   Alt + Shift + L         | Bloqueo de Pantalla             | Bloquea la sesión con la pantalla de bloqueo de Clavis.
+  ──────
+  ### 🪟 2. Atajos de Ventanas y Navegación en Niri
+
+  Niri utiliza un modelo de columnas desplazables infinitas (scrollable tiling). Estos son los movimientos clave:
+
+   Atajo                                  | Acción                   | Descripción
+  ----------------------------------------|--------------------------|---------------------------------------------------------
+   Super + T                              | Abrir Terminal           | Lanza la terminal predeterminada (Alacritty).
+   Super + Q                              | Cerrar Ventana           | Cierra la ventana activa.
+   Super + O                              | Vista General (Overview) | Aleja la vista para ver todos los espacios de trabajo y
+                                          |                          | columnas.
+   Super + H / L (o Flechas Izq/Der)      | Mover Foco               | Cambia el foco a la columna izquierda o derecha.
+   Super + J / K (o Flechas Arriba/Abajo) | Mover Foco Vertical      | Navega entre ventanas apiladas dentro de la misma
+                                          |                          | columna.
+   Super + Ctrl + H / L                   | Reorganizar Columnas     | Desplaza la columna actual hacia la izquierda o
+                                          |                          | derecha.
+   Super + F                              | Maximizar Columna        | Expande la columna para ocupar la pantalla completa.
+   Super + C                              | Centrar Columna          | Centra la columna actual en tu pantalla.
+   Super + R                              | Cambiar Ancho            | Alterna entre anchos predefinidos (1/3, 1/2, 2/3 de
+                                          |                          | pantalla).
+   Super + V                              | Modo Flotante            | Convierte la ventana activa en ventana flotante libre.
+   Super + W                              | Modo Pestañas (Tabbed)   | Agrupa las ventanas de la columna en pestañas.
+   Super + 1 .. 9                         | Espacios de Trabajo      | Cambia al espacio de trabajo correspondiente.
+   Super + Shift + E                      | Salir de Niri            | Muestra el diálogo de confirmación para cerrar la
+                                          |                          | sesión gráfica.
+  ──────

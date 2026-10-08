@@ -1,0 +1,4 @@
+https://github.com/vinceliuice/MacTahoe-icon-theme
+https://github.com/vinceliuice/MacTahoe-icon-theme/tree/main/cursors
+https://github.com/vinceliuice/MacTahoe-gtk-theme
+https://wallhaven.cc/w/5y3571

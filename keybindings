@@ -1,0 +1,32 @@
+  El archivo define 12 atajos. Todos ejecutan comandos IPC de Quickshell (qs -c clavis ...). Mod suele ser la tecla
+  Super/Windows. repeat=false significa que mantener pulsada la combinación no repite la acción.
+
+  ┌───────────────────────┬────────────────────────────────────────────────────────────┐
+  │ Atajo                 │ Acción                                                     │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Espacio         │ Abre o cierra el lanzador Spotlight                        │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + /               │ Abre o cierra el mapa de atajos                            │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Retroceso       │ Abre o cierra el menú de energía (apagar, reiniciar, etc.) │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Shift + Espacio │ Abre Spotlight en modo búsqueda web                        │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Alt + V         │ Abre Spotlight en modo portapapeles (historial)            │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Alt + W         │ Abre Spotlight en modo fondos de pantalla                  │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + N               │ Abre o cierra la barra lateral con el dashboard            │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + A               │ Abre o cierra la barra lateral con los ajustes rápidos     │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Ctrl + ,        │ Abre o cierra el centro de control en la sección General   │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Shift + W       │ Abre el hub de Keystone                                    │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Mod + Shift + T       │ Abre las herramientas de Keystone                          │
+  ├───────────────────────┼────────────────────────────────────────────────────────────┤
+  │ Alt + Shift + L       │ Bloquea la pantalla                                        │
+  └───────────────────────┴────────────────────────────────────────────────────────────┘
+
+  El último atajo (Alt + Shift + L) es el único que no usa Mod.

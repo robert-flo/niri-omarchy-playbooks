@@ -1,0 +1,67 @@
+Niri showcase (r/unixporn) - "niri: my new desktop"
+=================================================
+Post:          https://www.reddit.com/r/unixporn/comments/1wu5wa5/niri_my_new_desktop/
+Enlace corto:  https://www.reddit.com/r/unixporn/s/m09YpeQtfE
+
+Descargado:    ~/Q/niri_showcase_unixporn_720p.mp4
+               1280x720 (maxima disponible), 1:13, H.264, 8.5 MB, audio casi mudo
+
+
+COMANDO EXACTO USADO
+--------------------
+cd ~/Q && yt-dlp -f "bv*+ba/b" --merge-output-format mp4 -o "niri_showcase_unixporn_720p.%(ext)s" "https://v.redd.it/sp7z9y8iynsh1/DASHPlaylist.mpd"
+
+Version en varias lineas (mas segura al copiar/pegar; la \ al final indica que el comando continua):
+
+cd ~/Q
+yt-dlp -f "bv*+ba/b" \
+  --merge-output-format mp4 \
+  -o "niri_showcase_unixporn_720p.%(ext)s" \
+  "https://v.redd.it/sp7z9y8iynsh1/DASHPlaylist.mpd"
+
+Ojo: si se pega la version de una linea y la terminal la parte en dos, bash ejecuta
+yt-dlp sin URL ("You must provide at least one URL") y luego intenta ejecutar la URL.
+
+  -f "bv*+ba/b"              mejor video + mejor audio (o el mejor combinado si no hay separados)
+  --merge-output-format mp4  une video y audio en un solo .mp4 (requiere ffmpeg)
+  DASHPlaylist.mpd           playlist maestra con todas las resoluciones
+
+Ver resoluciones disponibles antes de descargar:
+yt-dlp -F https://v.redd.it/sp7z9y8iynsh1/DASHPlaylist.mpd
+yt-dlp -F https://v.redd.it/sp7z9y8iynsh1/HLSPlaylist.m3u8
+
+(DASH y HLS llegan ambos a 720p; DASH tiene mas bitrate: 1479k vs 922k, por eso se uso DASH.)
+
+
+POR QUE NO FUNCIONA CON EL ENLACE DEL POST
+------------------------------------------
+Reddit bloquea la IP de este equipo para su API (403 Blocked / "Your IP address is
+unable to access the Reddit API"), incluso usando las cookies de Chrome.
+(Para que yt-dlp pudiera leer las cookies de Chrome se instalo python-secretstorage:
+ `sudo pacman -S python-secretstorage` y se uso `--cookies-from-browser chrome+gnomekeyring`.
+ No hizo falta al final; se puede quitar con `sudo pacman -Rns python-secretstorage`.)
+El servidor de video v.redd.it NO tiene ese bloqueo, asi que basta con conseguir
+el ID del video (aqui: sp7z9y8iynsh1) y apuntar yt-dlp a su playlist.
+
+
+COMO ENCONTRAR EL ENLACE v.redd.it EN DEVTOOLS (Chrome)
+-------------------------------------------------------
+1. Abre el post de Reddit en Chrome.
+2. Abre DevTools: F12  (o Ctrl+Shift+I).
+3. Ve a la pestana "Network" (Red).
+4. Recarga la pagina con F5 para que se registren todas las peticiones.
+5. En el cuadro "Filter" escribe:  v.redd.it
+   (tambien sirven:  CMAF   DASH   .mpd   .m3u8)
+6. Dale play al video si no arranca solo; apareceran peticiones como:
+     https://v.redd.it/sp7z9y8iynsh1/CMAF_96.mp4
+     https://v.redd.it/sp7z9y8iynsh1/CMAF_AUDIO_128.mp4
+     https://v.redd.it/sp7z9y8iynsh1/DASHPlaylist.mpd
+7. Clic derecho sobre cualquiera -> Copy -> Copy URL.
+8. Del enlace copiado quedate con la parte del ID:
+     https://v.redd.it/<ID>/
+   y anadele  DASHPlaylist.mpd  al final:
+     https://v.redd.it/<ID>/DASHPlaylist.mpd
+9. Usa ese enlace en el comando de arriba.
+
+Nota: archivos como CMAF_96.mp4 son UNA sola calidad (la mas baja) y sin audio.
+Usa siempre DASHPlaylist.mpd (o HLSPlaylist.m3u8) para obtener la maxima resolucion.
