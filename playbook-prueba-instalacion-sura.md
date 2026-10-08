@@ -132,6 +132,26 @@ Después: PR #1 mergeado con `--rebase` (rama 0 commits detrás de `master`), ra
 - Pendiente de comprobar **visualmente** iniciando sesión en niri como `sura` (lo que no se puede verificar sin sesión: Clavis en pantalla, blur, cursor, apps).
 - `sura` se conserva como **banco de pruebas** para no tocar el usuario real: reiniciarlo con los comandos de la sección 6 antes de cada prueba.
 
+## 7️⃣.1 ⏳ Pendiente: revisión visual en sesión `sura` (Niri)
+
+Iniciar sesión como `sura` eligiendo la sesión **Niri** y marcar:
+
+- [ ] **Clavis:** aparecen la barra y los paneles, y el wallpaper es `wallhaven-5y3571`.
+- [ ] **Ventanas:** el focus ring tiene el degradado cian → lavanda, y abrir y minimizar ventanas tiene animación.
+- [ ] **Cursor:** MacTahoe, también encima de apps como Thunderbird u Obsidian.
+- [ ] **Apps GTK** (p. ej. Nautilus): tema MacTahoe-Dark, con los botones a la izquierda.
+- [ ] **Terminal:** Alacritty abre fish con el prompt de colores.
+- [ ] **Apps:**
+  - [ ] mpv con la interfaz uosc;
+  - [ ] Thunderbird con el tema LiquidBird;
+  - [ ] Obsidian con el tema Violet y el vault "Notas" (vacío: las notas no están en el repo).
+- [ ] **Método de entrada:** el panel de fcitx5 usa los colores del wallpaper.
+- [ ] **Cambiar el wallpaper desde Clavis:** los colores del focus ring, fish y fcitx5 se actualizan solos.
+
+En el primer inicio de sesión el keyring puede pedir crear una contraseña; es normal.
+
+Después de la sesión: revisar qué cambió con `dotbare diff` (como `sura`) y comparando su home con el snapshot, y documentar aquí los resultados.
+
 ## 8️⃣ Eliminar `sura` (si algún día ya no hace falta)
 
 ```bash
