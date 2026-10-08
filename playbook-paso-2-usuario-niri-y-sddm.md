@@ -24,7 +24,9 @@
 En Omarchy (Arch Linux), SDDM ya viene preinstalado y configurado como servicio del sistema (`sddm.service`), corriendo de forma nativa sobre Wayland con `start-hyprland`. Reinstalarlo o sustituirlo por otro display manager rompería las integraciones de Plymouth y el arranque del sistema. Solo se requiere ajustar su configuración.
 
 ### 2. ¿Por qué deshabilitar `/etc/sddm.conf.d/autologin.conf`?
-Omarchy activa por defecto el inicio de sesión automático hacia el usuario original (`gracie`) en la sesión `omarchy.desktop`. Para que el usuario pueda ver la pantalla de inicio y elegir qué cuenta usar, es indispensable deshabilitar este archivo (renombrándolo a `.disabled`).
+Omarchy activa por defecto el inicio de sesión automático hacia el usuario original (`gracie`) en la sesión `omarchy.desktop`. Para que el usuario pueda ver la pantalla de inicio y elegir qué cuenta usar, es indispensable deshabilitar este archivo **sacándolo del directorio** `/etc/sddm.conf.d/`.
+
+> ⚠️ **Corrección (2026-10-08).** La versión original de este playbook lo renombraba a `autologin.conf.disabled` dentro del mismo directorio, y **no funcionaba**: SDDM lee *todos* los archivos de `sddm.conf.d` sin importar la extensión (Omarchy lo advierte en `/usr/share/omarchy/bin/omarchy-update-system-pkgs-when-conflicted`). Síntoma: al reiniciar no aparece SDDM y entra directo a `gracie`; en `journalctl -b -u sddm` se ve `pam_unix(sddm-autologin:session)` y `--autologin`. Solución: mover el archivo a `/etc/sddm.conf.d-disabled/autologin.conf`.
 
 ### 3. ¿Por qué cambiar el tema a `catppuccin-sddm-theme-mocha`?
 El tema por defecto de Omarchy (`/usr/share/sddm/themes/omarchy/Main.qml`) está diseñado de forma ultra-minimalista: contiene exclusivamente una caja de texto para la contraseña del último usuario, **sin interfaz gráfica para conmutar de usuario ni menú para seleccionar la sesión**.
@@ -75,9 +77,11 @@ if ! pacman -Q catppuccin-sddm-theme-mocha &>/dev/null; then
 fi
 
 echo "==> 5. Deshabilitando autologin y configurando tema en SDDM..."
-if [[ -f /etc/sddm.conf.d/autologin.conf ]]; then
-    mv /etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf.disabled
-fi
+# SDDM lee todos los archivos de sddm.conf.d (cualquier extensión): hay que sacarlo del directorio
+mkdir -p /etc/sddm.conf.d-disabled
+for f in /etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf.disabled; do
+    [[ -f "$f" ]] && mv "$f" /etc/sddm.conf.d-disabled/autologin.conf
+done
 
 cat <<EOF > /etc/sddm.conf.d/10-theme.conf
 [Theme]
@@ -126,5 +130,7 @@ Para comprobar que este paso quedó correctamente configurado:
    cat /etc/sddm.conf.d/10-theme.conf
    cat /etc/sddm.conf.d/99-omarchy-login.conf
    # Ambos deben indicar: Current=catppuccin-mocha-mauve
-   test ! -f /etc/sddm.conf.d/autologin.conf && echo "Autologin desactivado correctamente"
+   grep -rqs "^\[Autologin\]" /etc/sddm.conf.d/ || echo "Autologin desactivado correctamente"
+   # Tras reiniciar: no debe aparecer "sddm-autologin" en el journal
+   journalctl -b -u sddm | grep -c sddm-autologin    # -> 0
    ```
